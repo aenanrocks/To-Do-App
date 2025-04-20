@@ -21,8 +21,64 @@
             <button id="new-task-button">New Task</button>
 
             <!-- New task form goes here -->
+            <article>
+                <form id="new-task-form">
+                    <fieldset>
+                        <legend>Patient Information</legend>
 
-            
+                        <!-- Task number -->
+                        <div>
+                            <input type="number" id="task-num" hidden value="23">
+                        </div>
+
+                        <!-- Task Title -->
+                        <div>
+                            <label for="task-title">Task : </label>
+                            <input type="text" id="task-title" required>
+                        </div>
+
+                        <!-- Task Description -->
+                        <div>
+                            <label for="task-description" >Task Description : </label>
+                            <textarea type="text" id="task-description" ></textarea>
+                        </div>
+                        
+                        <!-- Task start date and time -->
+                        <div>
+                            <label for="start-datetime">Start Date and Time : </label>
+                            <input type="datetime-local" id="start-datetime" name="start-datetime" >
+                        </div>
+
+                        <!-- Task finsih date and time -->
+                        <div>
+                            <label for="finish-datetime">Finish Date and Time : </label>
+                            <input type="datetime-local" id="finish-datetime" name="finish-datetime" required>
+                        </div>
+
+                        <!-- Task category -->
+                        <div>
+                            <label for="task-category">Category : </label>
+                            <select name="task-category" id="task-category">
+                                <option value="category-personal" selected>Personal</option>
+                                <option value="category-work">Work</option>
+                                <option value="category-other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Task Priority -->
+                         <div>
+                            <label for="task-priority">Priority : </label>
+                            <select name="task-priority" id="task-priority">
+                                <option value="priority-normal" selected>Normal</option>
+                                <option value="priority-high">High</option>
+                                <option value="priority-low">Low</option>
+                            </select>
+                         </div>
+                        
+                    </fieldset>
+                </form>
+            </article>
+                         
 
         </section>
 
@@ -39,12 +95,14 @@
 
                     </thead>
                     <tbody>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
-                        <td>a</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
                     </tbody>
                 </table>
                 
