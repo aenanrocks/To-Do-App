@@ -6,7 +6,14 @@ newTaskButton.addEventListener("click" , showTaskForm);
 
 
 // Clicking Submit in form and hiding it
-taskForm.addEventListener("submit" , hideTaskForm);
+taskForm.addEventListener("submit" , () => {
+
+    // Hiding task form
+    hideTaskForm();
+
+    // Reset the form
+    taskForm.reset();
+});
 
 
 
