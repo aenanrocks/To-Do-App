@@ -5,6 +5,7 @@ const showTaskForm = () => {
 
 // Hiding task form
 const hideTaskForm = () => {
+    event.preventDefault();
     taskForm.style.display = 'none';
 }
 
