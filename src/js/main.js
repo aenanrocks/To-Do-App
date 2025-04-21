@@ -13,10 +13,10 @@ taskForm.addEventListener("submit" , () => {
     storingTask();
 
     // Hiding task form
-    // hideTaskForm();
+    hideTaskForm();
 
     // Reset the form
-    // taskForm.reset();
+    taskForm.reset();
 });
 
 
