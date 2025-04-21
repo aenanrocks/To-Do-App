@@ -7,6 +7,15 @@ const storingTask = () => {
     let taskDescription = document.getElementById("task-description").value;
     let startDateTime = document.getElementById("start-datetime").value;
     let finishDateTime = document.getElementById("finish-datetime").value;
+
+
+    // I will make sure this works
+    // const startDate = new Date(startDateTime);
+    // const finishDate = new Date(finishDateTime);
+    // if (finishDate <= startDate){
+    //     alert("The finish date and time should be after start date and time.")
+    //     return;
+    // }
     let taskCategory = document.getElementById("task-category").value;
     let taskPriority = document.getElementById("task-priority").value;
 
@@ -14,17 +23,17 @@ const storingTask = () => {
 
     // serialization of data / Storing form data in local storage
 
-    // If there is nothing in storage
-    if (localStorage.getItem("taskDetails") == null){
-        taskDetails["task_num"] = 1;
-        let allTaskData = [taskDetails];
-        localStorage.setItem("taskDetails", JSON.stringify(allTaskData));
-    }else{
+    if (localStorage.getItem("taskDetails") != null){
         // If there is something in storage
         let allTaskData = JSON.parse(localStorage.getItem("taskDetails"));
         genID(taskDetails , allTaskData);
         allTaskData.push(taskDetails);
-        localStorage.setItem("taskDetails", JSON.stringify(allTaskData));        
+        localStorage.setItem("taskDetails", JSON.stringify(allTaskData)); 
+    }else{
+        // If there is nothing in storage
+        taskDetails["task_num"] = 1;
+        let allTaskData = [taskDetails];
+        localStorage.setItem("taskDetails", JSON.stringify(allTaskData));       
     }
 
 }

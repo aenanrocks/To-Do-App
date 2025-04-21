@@ -4,7 +4,7 @@ let taskForm = document.getElementById("new-task-form");
 let newTaskButton = document.getElementById("new-task-button");
 newTaskButton.addEventListener("click" , showTaskForm);
 
-
+updateTable();
 
 // Clicking Submit in form and hiding it
 taskForm.addEventListener("submit" , () => {
@@ -17,6 +17,9 @@ taskForm.addEventListener("submit" , () => {
 
     // Reset the form
     taskForm.reset();
+
+    // Updating the table
+    updateTable();
 });
 
 
