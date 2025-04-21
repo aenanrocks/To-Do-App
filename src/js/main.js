@@ -5,6 +5,7 @@ let newTaskButton = document.getElementById("new-task-button");
 newTaskButton.addEventListener("click" , showTaskForm);
 
 
+
 // Clicking Submit in form and hiding it
 taskForm.addEventListener("submit" , () => {
 
