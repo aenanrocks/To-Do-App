@@ -9,11 +9,14 @@ newTaskButton.addEventListener("click" , showTaskForm);
 // Clicking Submit in form and hiding it
 taskForm.addEventListener("submit" , () => {
 
+    // Storing Data in local storage
+    storingTask();
+
     // Hiding task form
-    hideTaskForm();
+    // hideTaskForm();
 
     // Reset the form
-    taskForm.reset();
+    // taskForm.reset();
 });
 
 
