@@ -22,3 +22,8 @@ const categorySelection = (category) => ({
 //     }
 // }
 
+// Task Priority output on Table
+const prioritySelection = (priority) => ({
+    "priority-normal" : "Normal" ,
+    "priority-low" : "Low" 
+})[priority] || "High" ;

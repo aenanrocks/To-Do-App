@@ -23,7 +23,7 @@ const updateTable = () => {
             // This adds new rows and td, making it dynamic ?            
             let rowAddition = "<tr> \
                     <td>" + allTaskData[i].task_num + "</td> \
-                    <td>" + allTaskData[i].task_num + "</td> \
+                    <td>" + prioritySelection(allTaskData[i].task_priority) + "</td> \
                     <td>" + categorySelection(allTaskData[i].task_category) + "</td> \
                     <td>" + allTaskData[i].task_title + "</td> \
                     <td>" + allTaskData[i].task_description + "</td> \
