@@ -14,13 +14,17 @@ const timeOptions = {
 
 let tableData = document.getElementById("table-data");
 const updateTable = () => {
+    // Getting data from storage
     let allTaskData = JSON.parse(localStorage.getItem("taskDetails"));
     
     if (allTaskData != null) {
         for (let i = 0 ; i < allTaskData.length ; i++){
-            console.log(i);
+
+            // This adds new rows and td, making it dynamic ?            
             let rowAddition = "<tr> \
                     <td>" + allTaskData[i].task_num + "</td> \
+                    <td>" + allTaskData[i].task_num + "</td> \
+                    <td>" + categorySelection(allTaskData[i].task_category) + "</td> \
                     <td>" + allTaskData[i].task_title + "</td> \
                     <td>" + allTaskData[i].task_description + "</td> \
                     <td>" + Date(allTaskData[i].finish_datetime) + "</td> \

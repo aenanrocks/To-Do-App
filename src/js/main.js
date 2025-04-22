@@ -12,13 +12,12 @@ taskForm.addEventListener("submit" , () => {
 
     // Storing Data in local storage
     storingTask();
-
     
-
 });
 
 
 // This can be used  with other feature, like canceling form
+
 // Hiding task form
 // hideTaskForm();
 

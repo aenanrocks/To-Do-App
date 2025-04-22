@@ -26,7 +26,12 @@ const storingTask = () => {
     if (localStorage.getItem("taskDetails") != null){
         // If there is something in storage
         let allTaskData = JSON.parse(localStorage.getItem("taskDetails"));
+
+        // This is just to learn how to call functions in other files with values
         genID(taskDetails , allTaskData);
+        // I can use this code anytime, and it will work same as the function above, this ijust to learn that the function can be later edited by other files
+        // taskDetails["task_num"] = allTaskData.length + 1;
+        
         allTaskData.push(taskDetails);
         localStorage.setItem("taskDetails", JSON.stringify(allTaskData)); 
     }else{
