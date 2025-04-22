@@ -1,5 +1,17 @@
 // Updating table with new data
 
+// This will be used later for getting proper time
+const timeOptions = {
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    timeZoneName: 'short'
+};
+
 let tableData = document.getElementById("table-data");
 const updateTable = () => {
     let allTaskData = JSON.parse(localStorage.getItem("taskDetails"));
@@ -22,3 +34,4 @@ const updateTable = () => {
     }
 }
 
+ 

@@ -4,6 +4,7 @@ let taskForm = document.getElementById("new-task-form");
 let newTaskButton = document.getElementById("new-task-button");
 newTaskButton.addEventListener("click" , showTaskForm);
 
+// Updating the table
 updateTable();
 
 // Clicking Submit in form and hiding it
@@ -12,17 +13,17 @@ taskForm.addEventListener("submit" , () => {
     // Storing Data in local storage
     storingTask();
 
-    // Hiding task form
-    hideTaskForm();
+    
 
-    // Reset the form
-    taskForm.reset();
-
-    // Updating the table
-    updateTable();
 });
 
 
+// This can be used  with other feature, like canceling form
+// Hiding task form
+// hideTaskForm();
+
+// Reset the form
+// taskForm.reset();
 
 
 /*Function study

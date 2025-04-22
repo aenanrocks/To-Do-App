@@ -8,7 +8,7 @@ const storingTask = () => {
     let startDateTime = document.getElementById("start-datetime").value;
     let finishDateTime = document.getElementById("finish-datetime").value;
 
-
+    // This is to make sure the finish date is greater than start date
     // I will make sure this works
     // const startDate = new Date(startDateTime);
     // const finishDate = new Date(finishDateTime);
