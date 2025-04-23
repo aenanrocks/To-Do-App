@@ -11,7 +11,14 @@ let headCategory = document.getElementById("head-category");
 let headFinishTime = document.getElementById("head-finish-time");
 let headRemaining = document.getElementById("head-remaining");
 
-headID.addEventListener("click" , () => {sortTable("tableData" , "key" , "asc")});
+
+// Sending the keys to ui.js
+headID.addEventListener("click" , () => keyAndTable("ID"));
+headPriority.addEventListener("click" , () => keyAndTable("Priority"));
+headCategory.addEventListener("click" , () => keyAndTable("Category"));
+headFinishTime.addEventListener("click" , () => keyAndTable("FinishTime"));
+headRemaining.addEventListener("click" , () => keyAndTable("Remaining"));
+
 
 // Updating the table
 updateTable();
