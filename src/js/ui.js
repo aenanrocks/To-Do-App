@@ -13,10 +13,12 @@ const timeOptions = {
 };
 
 let tableData = document.getElementById("table-data");
+
+// Getting data from storage
+let allTaskData = JSON.parse(localStorage.getItem("taskDetails"));
+
 const updateTable = () => {
-    // Getting data from storage
-    let allTaskData = JSON.parse(localStorage.getItem("taskDetails"));
-    
+        
     if (allTaskData != null) {
         for (let i = 0 ; i < allTaskData.length ; i++){
 
