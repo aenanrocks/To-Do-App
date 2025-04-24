@@ -40,7 +40,8 @@ const updateTable = () => {
     }
 }
 
+console.log(allTaskData);
 // I get the key from main.js and give the value to sortFilter.js
 const keyAndTable = (key) => {
-    console.log(key);
+    sortTable(allTaskData,key);
 };

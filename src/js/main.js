@@ -4,6 +4,9 @@ let taskForm = document.getElementById("new-task-form");
 let newTaskButton = document.getElementById("new-task-button");
 newTaskButton.addEventListener("click" , showTaskForm);
 
+// Updating the table
+updateTable();
+
 // DOM for sorting by clicking the heads
 let headID = document.getElementById("head-id");
 let headPriority = document.getElementById("head-priority");
@@ -19,9 +22,6 @@ headCategory.addEventListener("click" , () => keyAndTable("Category"));
 headFinishTime.addEventListener("click" , () => keyAndTable("FinishTime"));
 headRemaining.addEventListener("click" , () => keyAndTable("Remaining"));
 
-
-// Updating the table
-updateTable();
 
 // Clicking Submit in form and hiding it
 taskForm.addEventListener("submit" , () => {
