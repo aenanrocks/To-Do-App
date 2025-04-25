@@ -1,13 +1,32 @@
-const sortTable = (table , key , direction = 'asc') => {
+const sortTable = (table , key , direction) => {
     // Getting table values and making a temporary table
     let tempTable = table;
     
-    // console.log("after" , tempTable.sort ( ( a , b ) => b.task_num - a.task_num));
+    if (key == "task_num" && direction == "asc"){
 
-    // Making sorted table
-    tempTable = tempTable.sort ( ( a , b ) => b.task_num - a.task_num);
-    
+        // Making sorted table descendng
+        tempTable = tempTable.sort ( ( a , b ) => b[key] - a[key]);
+        
+        // Direction change
+        directionChange("dsc")   ;
+
+    }else{
+
+        // Making sorted table ascending
+        tempTable = tempTable.sort ( ( a , b ) => a[key] - b[key]);
+
+        // Direction change
+        directionChange("asc")
+
+    }
+        
+    // Hiding original table
+    tableBody = document.getElementById("table-data");
+    tableBody.innerHTML = "";
 
     // updating table with sorted data
     updateTable(tempTable);
+
+
 };
+

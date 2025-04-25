@@ -40,7 +40,13 @@ const updateTable = (allTaskData = originalData) => {
     }
 }
 
+
+
+let direction = "asc";
+const directionChange = (direc) => { direction = direc};
+
 // I get the key from main.js and give the value to sortFilter.js
 const keyAndTable = (key) => {
-    sortTable(originalData,key);
+    
+    sortTable(originalData,key,direction);
 };

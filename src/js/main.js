@@ -16,11 +16,11 @@ let headRemaining = document.getElementById("head-remaining");
 
 
 // Sending the keys to ui.js
-headID.addEventListener("click" , () => keyAndTable("ID"));
-headPriority.addEventListener("click" , () => keyAndTable("Priority"));
-headCategory.addEventListener("click" , () => keyAndTable("Category"));
-headFinishTime.addEventListener("click" , () => keyAndTable("FinishTime"));
-headRemaining.addEventListener("click" , () => keyAndTable("Remaining"));
+headID.addEventListener("click" , () => keyAndTable("task_num"));
+headPriority.addEventListener("click" , () => keyAndTable("task_priority"));
+headCategory.addEventListener("click" , () => keyAndTable("task_category"));
+headFinishTime.addEventListener("click" , () => keyAndTable("finish_datetime"));
+// headRemaining.addEventListener("click" , () => keyAndTable("Remaining"));
 
 
 // Clicking Submit in form and hiding it
