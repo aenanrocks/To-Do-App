@@ -15,9 +15,9 @@ const timeOptions = {
 let tableData = document.getElementById("table-data");
 
 // Getting data from storage
-let allTaskData = JSON.parse(localStorage.getItem("taskDetails"));
+let originalData = JSON.parse(localStorage.getItem("taskDetails"));
 
-const updateTable = () => {
+const updateTable = (allTaskData = originalData) => {
         
     if (allTaskData != null) {
         for (let i = 0 ; i < allTaskData.length ; i++){
@@ -40,8 +40,7 @@ const updateTable = () => {
     }
 }
 
-console.log(allTaskData);
 // I get the key from main.js and give the value to sortFilter.js
 const keyAndTable = (key) => {
-    sortTable(allTaskData,key);
+    sortTable(originalData,key);
 };
