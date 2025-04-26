@@ -41,14 +41,18 @@ const keyAndTable = (key) => {
     sortTable(originalData,key,direction);
 };
 
-
 // For actions, we now have rows and data from which we need to do something
-const rowToData = (row) => {
+const rowToData = (action , row) => {
 
     const tempData = originalData;
-    // Calling action function
-    removingRow(tempData,row);
+
+    // Calling action functions
+    switch (action) {
+        case "delete" : removingRow(tempData,row);
+        case "edit" : editingRow(tempData,row);
+    }
+    
+    // Updating Data
     storingData(tempData);
     location.reload();
-
 }

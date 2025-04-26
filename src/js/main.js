@@ -17,15 +17,22 @@ forSorting.addEventListener("click" , (event) => {
     }
 });
 
-
 // DOM for actions, getting rows and then going for actions
 forActions = document.getElementById("table-data");
 forActions.addEventListener("click" , (event) => {
     const row = event.target.closest('tr').rowIndex;
     switch (event.target.textContent) {
-        case "Done or Delete ?" : rowToData(row); break;
-        case "Edit" : rowToData(row); break;
+        case "Done or Delete ?" : rowToData("delete" , row); break;
+        case "Edit" : rowToData("edit" , row); break;
     }
+});
+
+// Clicking Submit in form and hiding it
+taskForm.addEventListener("submit" , () => {
+
+    // Storing Data in local storage
+    storingTask();
+    
 });
 
 // DOM for sorting by clicking the heads (old method)
@@ -43,23 +50,6 @@ forActions.addEventListener("click" , (event) => {
 // let headRemaining = document.getElementById("head-remaining");
 // headFinishTime.addEventListener("click" , () => keyAndTable("finish_datetime"));
 // headRemaining.addEventListener("click" , () => keyAndTable("Remaining"));
-
-// DOM for actions
-let deleteAction = document.getElementById("mark-complete");
-
-// // Actions click
-// deleteAction.addEventListener('click' , () => { console.log("yes")})
-
-
-// Clicking Submit in form and hiding it
-taskForm.addEventListener("submit" , () => {
-
-    // Storing Data in local storage
-    storingTask();
-    
-});
-
-
 
 // This can be used  with other feature, like canceling form
 
