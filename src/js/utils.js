@@ -7,8 +7,8 @@ const genID = (task , data) => {
 // Category output on Table
 // Object lookup method
 const categorySelection = (category) => ({
-    "category-personal" : "Personal" ,
-    "category-work" : "Work"
+    1 : "Personal" ,
+    3 : "Work"
 })[category] || "Other" ; // This would be default value
 
 // This is old code
@@ -24,6 +24,6 @@ const categorySelection = (category) => ({
 
 // Task Priority output on Table
 const prioritySelection = (priority) => ({
-    "priority-normal" : "Normal" ,
-    "priority-low" : "Low" 
+    2 : "Normal" ,
+    1 : "Low" 
 })[priority] || "High" ;
