@@ -1,6 +1,7 @@
 // Generating unique IDs
 const genID = (task , data) => {
-    task["task_num"] = data.length +1;
+    if (data.length === 0) return task["task_num"] = 1;
+    task["task_num"] = data[data.length-1].task_num + 1;
     
 };
 
