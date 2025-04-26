@@ -55,5 +55,5 @@ const rowToData = (action , rowNum) => {
     
     // Updating Data
     storingData(tempData);
-    location.reload();
+    // location.reload();
 }

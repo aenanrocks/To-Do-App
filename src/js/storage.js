@@ -6,18 +6,9 @@ const storingTask = () => {
         taskTitle = document.getElementById("task-title").value,
         taskDescription = document.getElementById("task-description").value,
         startDateTime = document.getElementById("start-datetime").value,
-        finishDateTime = document.getElementById("finish-datetime").value;
-
-    // This is to make sure the finish date is greater than start date
-    // I will make sure this works
-    // const startDate = new Date(startDateTime);
-    // const finishDate = new Date(finishDateTime);
-    // if (finishDate <= startDate){
-    //     alert("The finish date and time should be after start date and time.")
-    //     return;
-    // }
-    let taskCategory = document.getElementById("task-category").value;
-    let taskPriority = document.getElementById("task-priority").value;
+        finishDateTime = document.getElementById("finish-datetime").value,
+        taskCategory = document.getElementById("task-category").value,
+        taskPriority = document.getElementById("task-priority").value;
 
     const taskDetails = {task_num:taskNum , task_title:taskTitle , task_description:taskDescription , start_date_time:startDateTime , finish_date_time:finishDateTime , task_category:taskCategory , task_priority:taskPriority};
 

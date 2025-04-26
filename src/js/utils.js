@@ -12,17 +12,6 @@ const categorySelection = (category) => ({
     3 : "Work"
 })[category] || "Other" ; // This would be default value
 
-// This is old code
-// const categorySelection = (category) => {
-//     if (category == "category-personal"){
-//         return "Personal";
-//     }else if (category == "category-work"){
-//         return "Work";
-//     }else{
-//         return "Other";
-//     }
-// }
-
 // Task Priority output on Table
 const prioritySelection = (priority) => ({
     2 : "Normal" ,
