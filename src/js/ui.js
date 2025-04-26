@@ -37,8 +37,7 @@ const updateTable = (allTaskData = originalData) => {
                     <td>" + formattedDate + "</td> \
                     <td>" + (allTaskData[i].finish_date_time - allTaskData[i].start_date_time) + "</td> \
                     <td><button id='edit-row'>Edit</button></td> \
-                    <td><button id='delete-row'>Delete</button></td> \
-                    <td><button id='mark-complete'>Done?</button></td> \
+                    <td><button id='mark-complete-" + i +"'>Done or Delete ?</button></td> \
                 </tr>";
             tableData.insertAdjacentHTML('beforeend', rowAddition);
         }

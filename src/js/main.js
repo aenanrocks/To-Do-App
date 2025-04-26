@@ -7,20 +7,34 @@ newTaskButton.addEventListener("click" , showTaskForm);
 // Updating the table
 updateTable();
 
-// DOM for sorting by clicking the heads
-let headID = document.getElementById("head-id");
-let headPriority = document.getElementById("head-priority");
-let headCategory = document.getElementById("head-category");
+// DOM for sorting by clicking the heads (new method)
+forEvents = document.getElementById('heads');
+forEvents.addEventListener("click" , (event) => {
+    switch (event.target.id) {
+        case "head-id":       keyAndTable("task_num"); break;
+        case "head-priority": keyAndTable("task_priority"); break;
+        case "head-category": keyAndTable("task_category"); break;
+    }
+});
+// DOM for sorting by clicking the heads (old method)
+// let headID = document.getElementById("head-id");
+// let headPriority = document.getElementById("head-priority");
+// let headCategory = document.getElementById("head-category");
 let headFinishTime = document.getElementById("head-finish-time");
 let headRemaining = document.getElementById("head-remaining");
 
-
 // Sending the keys to ui.js
-headID.addEventListener("click" , () => keyAndTable("task_num"));
-headPriority.addEventListener("click" , () => keyAndTable("task_priority"));
-headCategory.addEventListener("click" , () => keyAndTable("task_category"));
+// headID.addEventListener("click" , () => keyAndTable("task_num"));
+// headPriority.addEventListener("click" , () => keyAndTable("task_priority"));
+// headCategory.addEventListener("click" , () => keyAndTable("task_category"));
 headFinishTime.addEventListener("click" , () => keyAndTable("finish_datetime"));
 // headRemaining.addEventListener("click" , () => keyAndTable("Remaining"));
+
+// DOM for actions
+let deleteAction = document.getElementById("mark-complete");
+
+// // Actions click
+// deleteAction.addEventListener('click' , () => { console.log("yes")})
 
 
 // Clicking Submit in form and hiding it
