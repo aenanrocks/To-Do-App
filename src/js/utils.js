@@ -27,3 +27,18 @@ const prioritySelection = (priority) => ({
     2 : "Normal" ,
     1 : "Low" 
 })[priority] || "High" ;
+
+const convertDateTime = (dateTime) => {
+    const tempDateTime = dateTime;
+    const dateObj = new Date(tempDateTime);
+    const formattedDate = dateObj.toLocaleString('en-UK', {
+        month: 'short',    
+        day: 'numeric',    
+        year: 'numeric',   
+        hour: '2-digit',   
+        minute: '2-digit', 
+        hour12: false      
+        });
+
+    return formattedDate;
+};

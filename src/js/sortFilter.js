@@ -31,7 +31,6 @@ const sortTable = (table , key , direction) => {
     // Sorting with Priority
     if (tempKey === "task_priority" && direction == "asc"){
 
-        console.log("working")
 
         // Making sorted table descendng
         tempTable = tempTable.sort ( ( a , b ) => b[key] - a[key]);
@@ -43,7 +42,6 @@ const sortTable = (table , key , direction) => {
         document.getElementById("head-priority").innerHTML = "Priority &darr;"; 
 
     }else if (tempKey === "task_priority" && direction == "dsc"){
-        console.log("this too working")
 
         // Making sorted table ascending
         tempTable = tempTable.sort ( ( a , b ) => a[key] - b[key]);
@@ -59,7 +57,6 @@ const sortTable = (table , key , direction) => {
     // Sorting with category
     if (tempKey === "task_category" && direction == "asc"){
 
-        console.log("working")
 
         // Making sorted table descendng
         tempTable = tempTable.sort ( ( a , b ) => b[key] - a[key]);
@@ -71,7 +68,6 @@ const sortTable = (table , key , direction) => {
         document.getElementById("head-category").innerHTML = "Category &darr;"; 
 
     }else if (tempKey === "task_category" && direction == "dsc"){
-        console.log("this too working")
 
         // Making sorted table ascending
         tempTable = tempTable.sort ( ( a , b ) => a[key] - b[key]);

@@ -22,6 +22,11 @@ const updateTable = (allTaskData = originalData) => {
     if (allTaskData != null) {
         for (let i = 0 ; i < allTaskData.length ; i++){
 
+            // Converting time to readable format
+
+            const formattedDate = convertDateTime(allTaskData[i].finish_date_time);
+            
+
             // This adds new rows and td, making it dynamic ?            
             let rowAddition = "<tr> \
                     <td>" + allTaskData[i].task_num + "</td> \
@@ -29,8 +34,8 @@ const updateTable = (allTaskData = originalData) => {
                     <td>" + categorySelection(allTaskData[i].task_category) + "</td> \
                     <td>" + allTaskData[i].task_title + "</td> \
                     <td>" + allTaskData[i].task_description + "</td> \
-                    <td>" + Date(allTaskData[i].finish_datetime) + "</td> \
-                    <td>" + (Date(allTaskData[i].finish_datetime) - Date(allTaskData[i].start_datetime)) + "</td> \
+                    <td>" + formattedDate + "</td> \
+                    <td>" + (allTaskData[i].finish_date_time - allTaskData[i].start_date_time) + "</td> \
                     <td><button id='edit-row'>Edit</button></td> \
                     <td><button id='delete-row'>Delete</button></td> \
                     <td><button id='mark-complete'>Done?</button></td> \
