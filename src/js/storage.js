@@ -33,12 +33,16 @@ const storingTask = () => {
         // taskDetails["task_num"] = allTaskData.length + 1;
         
         allTaskData.push(taskDetails);
-        localStorage.setItem("taskDetails", JSON.stringify(allTaskData)); 
+        storingData(allTaskData);
     }else{
         // If there is nothing in storage
         taskDetails["task_num"] = 1;
         let allTaskData = [taskDetails];
-        localStorage.setItem("taskDetails", JSON.stringify(allTaskData));       
+        storingData(allTaskData);
     }
 
+}
+
+const storingData = (data) => {
+    localStorage.setItem("taskDetails", JSON.stringify(data)); 
 }

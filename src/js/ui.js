@@ -1,17 +1,5 @@
 // Updating table with new data
 
-// This will be used later for getting proper time
-const timeOptions = {
-    weekday: 'long', 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    timeZoneName: 'short'
-};
-
 let tableData = document.getElementById("table-data");
 
 // Getting data from storage
@@ -44,8 +32,6 @@ const updateTable = (allTaskData = originalData) => {
     }
 }
 
-
-
 let direction = "asc";
 const directionChange = (direc) => { direction = direc};
 
@@ -54,3 +40,15 @@ const keyAndTable = (key) => {
     
     sortTable(originalData,key,direction);
 };
+
+
+// For actions, we now have rows and data from which we need to do something
+const rowToData = (row) => {
+
+    const tempData = originalData;
+    // Calling action function
+    removingRow(tempData,row);
+    storingData(tempData);
+    location.reload();
+
+}

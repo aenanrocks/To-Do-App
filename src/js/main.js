@@ -8,26 +8,40 @@ newTaskButton.addEventListener("click" , showTaskForm);
 updateTable();
 
 // DOM for sorting by clicking the heads (new method)
-forEvents = document.getElementById('heads');
-forEvents.addEventListener("click" , (event) => {
+forSorting = document.getElementById('heads');
+forSorting.addEventListener("click" , (event) => {
     switch (event.target.id) {
         case "head-id":       keyAndTable("task_num"); break;
         case "head-priority": keyAndTable("task_priority"); break;
         case "head-category": keyAndTable("task_category"); break;
     }
 });
+
+
+// DOM for actions, getting rows and then going for actions
+forActions = document.getElementById("table-data");
+forActions.addEventListener("click" , (event) => {
+    const row = event.target.closest('tr').rowIndex;
+    switch (event.target.textContent) {
+        case "Done or Delete ?" : rowToData(row); break;
+        case "Edit" : rowToData(row); break;
+    }
+});
+
 // DOM for sorting by clicking the heads (old method)
 // let headID = document.getElementById("head-id");
 // let headPriority = document.getElementById("head-priority");
 // let headCategory = document.getElementById("head-category");
-let headFinishTime = document.getElementById("head-finish-time");
-let headRemaining = document.getElementById("head-remaining");
 
-// Sending the keys to ui.js
+// Sending the keys to ui.js (old)
 // headID.addEventListener("click" , () => keyAndTable("task_num"));
 // headPriority.addEventListener("click" , () => keyAndTable("task_priority"));
 // headCategory.addEventListener("click" , () => keyAndTable("task_category"));
-headFinishTime.addEventListener("click" , () => keyAndTable("finish_datetime"));
+
+// Need to sort these 
+// let headFinishTime = document.getElementById("head-finish-time");
+// let headRemaining = document.getElementById("head-remaining");
+// headFinishTime.addEventListener("click" , () => keyAndTable("finish_datetime"));
 // headRemaining.addEventListener("click" , () => keyAndTable("Remaining"));
 
 // DOM for actions
