@@ -9,5 +9,3 @@ const showTaskForm = () => {
 //     taskForm.style.display = 'none';
 // }
 
-
-// COnverting time to numbers

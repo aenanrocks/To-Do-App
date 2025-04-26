@@ -40,7 +40,6 @@ const storingTask = () => {
         let allTaskData = [taskDetails];
         storingData(allTaskData);
     }
-
 }
 
 const storingData = (data) => {

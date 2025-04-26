@@ -23,7 +23,7 @@ const updateTable = (allTaskData = originalData) => {
                     <td>" + allTaskData[i].task_title + "</td> \
                     <td>" + allTaskData[i].task_description + "</td> \
                     <td>" + formattedDate + "</td> \
-                    <td>" + (allTaskData[i].finish_date_time - allTaskData[i].start_date_time) + "</td> \
+                    <td>" + ((Date.parse(allTaskData[i].finish_date_time) - Date.parse(allTaskData[i].start_date_time))/1000) + "</td> \
                     <td><button id='edit-row'>Edit</button></td> \
                     <td><button id='mark-complete-" + i +"'>Done or Delete ?</button></td> \
                 </tr>";
