@@ -2,11 +2,11 @@
 const storingTask = () => {
 
     // DOM Querying 
-    let taskNum = document.getElementById("task-num").value;
-    let taskTitle = document.getElementById("task-title").value;
-    let taskDescription = document.getElementById("task-description").value;
-    let startDateTime = document.getElementById("start-datetime").value;
-    let finishDateTime = document.getElementById("finish-datetime").value;
+    const taskNum = document.getElementById("task-num").value,
+        taskTitle = document.getElementById("task-title").value,
+        taskDescription = document.getElementById("task-description").value,
+        startDateTime = document.getElementById("start-datetime").value,
+        finishDateTime = document.getElementById("finish-datetime").value;
 
     // This is to make sure the finish date is greater than start date
     // I will make sure this works

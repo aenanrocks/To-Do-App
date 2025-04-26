@@ -16,7 +16,7 @@ const updateTable = (allTaskData = originalData) => {
             
 
             // This adds new rows and td, making it dynamic ?            
-            let rowAddition = "<tr> \
+            let rowAddition = "<tr class='row-data'> \
                     <td>" + allTaskData[i].task_num + "</td> \
                     <td>" + prioritySelection(allTaskData[i].task_priority) + "</td> \
                     <td>" + categorySelection(allTaskData[i].task_category) + "</td> \
@@ -42,14 +42,15 @@ const keyAndTable = (key) => {
 };
 
 // For actions, we now have rows and data from which we need to do something
-const rowToData = (action , row) => {
+const rowToData = (action , rowNum) => {
 
     const tempData = originalData;
+    // console.log(rowNum , originalData[rowNum-1].task_title);
 
     // Calling action functions
     switch (action) {
-        case "delete" : removingRow(tempData,row);
-        case "edit" : editingRow(tempData,row);
+        case "delete" : removingRow(tempData , rowNum); break;
+        case "edit" : editingRow(tempData, rowNum); break;
     }
     
     // Updating Data
